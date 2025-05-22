@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercício 3 - Ordem Inversa</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h2 {
+      color: #333;
+    }
+    
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 200px;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    #resultado3 {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Digite 5 números reais:</h2>
+  <input id="v0" type="number" step="any"><br>
+  <input id="v1" type="number" step="any"><br>
+  <input id="v2" type="number" step="any"><br>
+  <input id="v3" type="number" step="any"><br>
+  <input id="v4" type="number" step="any"><br>
+  <button onclick="mostrarInverso()">Mostrar Ordem Inversa</button>
+  <p id="resultado3"></p>
+
+  <script>
+    function mostrarInverso() {
+      const numeros = [];
+      for (let i = 0; i < 5; i++) {
+        numeros.push(parseFloat(document.getElementById("v" + i).value));
+      }
+
+      const inverso = [...numeros].reverse();
+      document.getElementById("resultado3").innerHTML = "Ordem inversa: " + inverso.join(", ");
+    }
+  </script>
+</body>
+</html>

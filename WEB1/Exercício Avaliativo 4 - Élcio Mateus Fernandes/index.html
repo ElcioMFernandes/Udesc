@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exercício Avaliativo 4 - Élcio Mateus Fernandes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body onload="paginaCarregada()">
+    <h1>SOMA</h1>
+
+    <input
+      type="number"
+      id="num1"
+      onfocus="ajudaFocus(this)"
+      onblur="ajudaBlur(this)"
+    />
+    +
+    <input
+      type="number"
+      id="num2"
+      onfocus="ajudaFocus(this)"
+      onblur="ajudaBlur(this)"
+    />
+    <button onclick="soma()">=</button>
+    <span id="resultado">0</span>
+    <p>Ajuda: <span id="ajuda"></span></p>
+
+    <div class="cores">
+      <p>Testando cor do texto</p>
+      <div
+        class="cor"
+        data-cor="red"
+        onmouseover="mudaCorResultado('red')"
+        onmouseout="mudaCorResultado('')"
+      ></div>
+      <div
+        class="cor"
+        data-cor="yellow"
+        onmouseover="mudaCorResultado('yellow')"
+        onmouseout="mudaCorResultado('')"
+      ></div>
+      <div
+        class="cor"
+        data-cor="cyan"
+        onmouseover="mudaCorResultado('cyan')"
+        onmouseout="mudaCorResultado('')"
+      ></div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

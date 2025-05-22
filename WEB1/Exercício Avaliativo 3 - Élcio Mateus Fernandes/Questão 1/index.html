@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercício 1 - Números Ímpares</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h2 {
+      color: #333;
+    }
+    
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 200px;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    #resultado1 {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Digite 5 números inteiros:</h2>
+  <input id="n0" type="number"><br>
+  <input id="n1" type="number"><br>
+  <input id="n2" type="number"><br>
+  <input id="n3" type="number"><br>
+  <input id="n4" type="number"><br>
+  <button onclick="mostrarImpares()">Ver ímpares</button>
+  <p id="resultado1"></p>
+  <script>
+    function mostrarImpares() {
+      const numeros = [];
+      for (let i = 0; i < 5; i++) {
+        numeros.push(parseInt(document.getElementById("n" + i).value));
+      }
+      let impares = numeros.filter(n => n % 2 !== 0);
+      document.getElementById("resultado1").innerHTML = "Ímpares: " + impares.join(", ");
+    }
+  </script>
+</body>
+</html>

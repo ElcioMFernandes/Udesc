@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exercício 2 - Média</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    
+    h2 {
+      color: #333;
+    }
+    
+    input {
+      margin-bottom: 10px;
+      padding: 5px;
+      width: 200px;
+    }
+    
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 8px 15px;
+      border: none;
+      cursor: pointer;
+      margin-top: 5px;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    #resultado2 {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h2>Digite 5 números reais:</h2>
+  <input id="r0" type="number" step="any"><br>
+  <input id="r1" type="number" step="any"><br>
+  <input id="r2" type="number" step="any"><br>
+  <input id="r3" type="number" step="any"><br>
+  <input id="r4" type="number" step="any"><br>
+  <button onclick="calcularMedia()">Calcular Média</button>
+  <p id="resultado2"></p>
+  <script>
+    function media(vetor) {
+      let soma = 0;
+      for (let i = 0; i < vetor.length; i++) {
+        soma += vetor[i];
+      }
+      return soma / vetor.length;
+    }
+    function calcularMedia() {
+      const numeros = [];
+      for (let i = 0; i < 5; i++) {
+        numeros.push(parseFloat(document.getElementById("r" + i).value));
+      }
+      const resultado = media(numeros);
+      document.getElementById("resultado2").innerHTML = "Média: " + resultado.toFixed(2);
+    }
+  </script>
+</body>
+</html>
